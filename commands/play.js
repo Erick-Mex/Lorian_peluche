@@ -1,19 +1,9 @@
 const play = require("play-dl");
 
-//Import a list of link of YT or SC
-const voiceArray = [
-  "https://youtu.be/5C8yvJUVB-0",
-  "https://youtu.be/1tk1pqwrOys",
-  "https://youtu.be/h7MYJghRWt0",
-  "https://youtu.be/wVh40xOFoAc",
-  "https://youtu.be/ulfY8WQE_HE",
-  "https://youtu.be/yvzKKZp3usE",
-];
-
 let previousIndex = -1;
 let timer = 0;
 
-const { timeoutID } = require("../global/variables.js");
+const { timeoutID, voiceArray } = require("../global/variables.js");
 
 const {
   AudioPlayer,
