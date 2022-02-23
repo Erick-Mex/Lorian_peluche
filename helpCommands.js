@@ -19,4 +19,19 @@ module.exports = [
     description: 'Stops playing the voice clips',
     format: '.stop'
   },
+  {
+    name: 'list',
+    description: 'Display a list of all the voice clips',
+    format: '.list'
+  },
+  {
+    name: 'remove',
+    description: 'remove a specific voice clip of the list',
+    format: '.remove <number>'
+  },
+  {
+    name: 'add',
+    description: 'Add a new voice clip',
+    format: '.add <YT url>'
+  },
 ];
