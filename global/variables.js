@@ -1,7 +1,5 @@
 const play = require("play-dl");
 
-let timeoutID;
-
 //Import a list of link of YT or SC
 const voiceArray = [
   "https://youtu.be/5C8yvJUVB-0",
@@ -30,7 +28,6 @@ const extractVideoInfo = async (arrayVoice) => {
 };
 
 module.exports = {
-  timeoutID,
   voiceArray,
   extractVideoInfo,
 };
