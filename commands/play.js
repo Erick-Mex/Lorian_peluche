@@ -2,8 +2,8 @@ const play = require("play-dl");
 
 let previousIndex = -1;
 let timer = 0;
-
-const { timeoutID, voiceArray } = require("../global/variables.js");
+let timeoutID;
+const { voiceArray } = require("../global/variables.js");
 
 const {
   AudioPlayer,
