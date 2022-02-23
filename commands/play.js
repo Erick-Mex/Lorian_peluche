@@ -42,7 +42,7 @@ module.exports = {
     }
     if (cmd === "stop") {
       clearTimeout(timeoutID);
-      stopVoiceClips();
+      stopVoiceClips(message);
     }
   },
 };
@@ -89,7 +89,7 @@ const playVoiceClip = async (connection, player) => {
   });
 };
 
-const stopVoiceClips = () => {
+const stopVoiceClips = (message) => {
   const pvc = getVoiceConnection(message.guid.id);
   const voiceChannel = message.member.voice.channel;
 
@@ -105,6 +105,7 @@ const stopVoiceClips = () => {
   const player = pvc.state.subscription.player;
 
   player.stop();
+  
   player.on(AudioPlayerStatus.Idle, () => {
     console.log('Status: Stop');
     message.channel.send('I will stop playing the voice clips, master');
